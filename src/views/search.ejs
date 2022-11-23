@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Phoebe Search</title>
+  </head>
+  <body>
+    <form action="/search" method="get">
+      <img src="/phoebe.gif" width="60" alt="Pixelated dog" />
+      <br />
+      <font size="4">Search for more:</font>
+      <input type="text" name="query" />
+      <input type="submit" value="Search" />
+    </form>
+    <br />
+    <hr />
+    <h2>Results for <%= query %></h2>
+    <hr />
+
+    <% results.map(result => {%>
+    <h3><a href="<%= result.url %>" target="_blank"><%= result.title %></a></h3>
+    <p><%= result.description %></p>
+    <hr />
+    %> <% }) %>
+  </body>
+</html>
