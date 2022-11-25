@@ -7,17 +7,11 @@ export class SearchController {
 
   @Get()
   @Render('search')
-  search(@Query('query') query) {
-    this.searchService.search(query);
+  async search(@Query('query') query) {
+    const results = await this.searchService.search(query);
     return {
       query,
-      results: [
-        {
-          title: 'Google',
-          url: 'https://google.com',
-          description: 'Just Google it.',
-        },
-      ],
+      results,
     };
   }
 }
