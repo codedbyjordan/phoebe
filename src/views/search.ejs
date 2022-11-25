@@ -14,12 +14,13 @@
     </form>
     <br />
     <hr />
-    <h2>Results for <%= query %></h2>
+    <h2>Results for '<%= query %>'</h2>
     <hr />
 
     <% results.map(result => {%>
     <h3><a href="<%= result.url %>" target="_blank"><%= result.title %></a></h3>
-    <p><%= result.description %></p>
+    <p><%- result.description %></p>
+    <a href="<%= "/read?url=" + result.url %>" target="_blank">View stripped down version</a></h3>
     <hr />
     %> <% }) %>
   </body>
