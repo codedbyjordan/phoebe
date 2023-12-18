@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
-import { webster } from "webster-router/dist";
 import staticPlugin from "@elysiajs/static";
 import { html } from "@elysiajs/html";
+import { webster } from "webster-router";
 
 const app = new Elysia()
   .use(html())
