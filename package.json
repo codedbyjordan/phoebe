@@ -6,7 +6,16 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/html": "^0.7.3",
+    "@elysiajs/static": "^0.7.1",
+    "@types/ejs": "^3.1.5",
+    "@types/jsdom": "^21.1.6",
+    "ejs": "^3.1.9",
+    "elysia": "latest",
+    "elysia-autoroutes": "^0.4.0",
+    "jsdom": "^23.0.1",
+    "rxjs": "^7.8.1",
+    "webster-router": "^1.0.0"
   },
   "devDependencies": {
     "bun-types": "latest"
