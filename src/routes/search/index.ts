@@ -1,9 +1,9 @@
-import { Context } from "elysia";
 import { JSDOM } from "jsdom";
+import { Route } from "webster-router";
 import { renderEjs } from "../../utils/render-ejs";
 
-export const get = {
-  handler: async ({ query, set }: Context) => {
+export const get: Route = {
+  handler: async ({ query, set }) => {
     if (!query.q) set.redirect = "/";
 
     const baseUrl = "https://html.duckduckgo.com/html?q=";
