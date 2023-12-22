@@ -26,7 +26,7 @@ export const get: Route = {
 
     const { document } = new JSDOM(dom).window;
 
-    const readable = new Readability(document as any).parse();
+    const readable = new Readability(document).parse();
 
     await browser.close();
     return renderEjs("view.ejs", {
